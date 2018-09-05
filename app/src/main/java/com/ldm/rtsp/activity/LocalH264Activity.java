@@ -151,7 +151,7 @@ public class LocalH264Activity extends Activity {
                 e.printStackTrace();
             }
             int bytes_cnt = 0;
-            while (mStopFlag == false) {
+            while (!mStopFlag) {
                 bytes_cnt = streamBuffer.length;
                 if (bytes_cnt == 0) {
                     streamBuffer = dummyFrame;
